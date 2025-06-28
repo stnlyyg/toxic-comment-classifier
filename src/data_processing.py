@@ -25,6 +25,7 @@ def main():
 
     label_col = ['toxic', 'severe_toxic', 'obscene', 'threat', 'insult', 'identity_hate']
     df_raw_data['label'] = df_raw_data[label_col].values.tolist()
+    df_raw_data['label'] = df_raw_data['label'].apply(lambda label_list:[float(label) for label in label_list])
 
     df_train_data = df_raw_data[['comment_text', 'label']]
 

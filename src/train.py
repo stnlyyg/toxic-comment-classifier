@@ -1,14 +1,14 @@
 #import library
 import numpy as np
 import torch
-from transformers import AutoTokenizer,AutoModelForSequenceClassification, TrainingArguments, Trainer
+from transformers import AutoTokenizer, BertForSequenceClassification, TrainingArguments, Trainer, AutoConfig
 from sklearn.metrics import accuracy_score, f1_score, roc_auc_score
 from datasets import load_from_disk
 
 #import directory
 import config
 
-this_model = AutoModelForSequenceClassification.from_pretrained(config.BASE_MODEL)
+this_model = BertForSequenceClassification.from_pretrained(config.BASE_MODEL, num_labels=6, problem_type="multi_label_classification")
 this_tokenizer = AutoTokenizer.from_pretrained(config.BASE_MODEL)
 
 def multi_label_metrics(predictions, labels, threshold=0.5):
