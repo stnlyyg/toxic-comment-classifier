@@ -1,14 +1,14 @@
 #import library
 import numpy as np
 import torch
-from transformers import AutoTokenizer, BertForSequenceClassification, TrainingArguments, Trainer, AutoConfig
+from transformers import AutoTokenizer, BertForSequenceClassification, TrainingArguments, Trainer
 from sklearn.metrics import accuracy_score, f1_score, roc_auc_score
 from datasets import load_from_disk
 
 #import directory
 import config
 
-this_model = BertForSequenceClassification.from_pretrained(config.BASE_MODEL, num_labels=6, problem_type="multi_label_classification")
+this_model = BertForSequenceClassification.from_pretrained(config.BASE_MODEL, num_labels=config.NUM_LABELS, problem_type="multi_label_classification")
 this_tokenizer = AutoTokenizer.from_pretrained(config.BASE_MODEL)
 
 def multi_label_metrics(predictions, labels, threshold=0.5):
@@ -20,7 +20,7 @@ def multi_label_metrics(predictions, labels, threshold=0.5):
 
     y_true = labels
     f1_micro_average = f1_score(y_true=y_true, y_pred=y_pred, average='micro')
-    roc_auc = roc_auc_score(y_true=y_true, y_pred=y_pred, average='micro')
+    roc_auc = roc_auc_score(y_true=y_true, y_score=probs, average='micro')
     accuracy = accuracy_score(y_true=y_true, y_pred=y_pred)
 
     metrics = {'f1': f1_micro_average, 'roc_auc': roc_auc, 'accuracy': accuracy}

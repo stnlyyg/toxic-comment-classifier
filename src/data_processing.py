@@ -11,14 +11,14 @@ def main():
         print("--Dataset exist and processed--")
         print(f"Train dataset location: {config.TRAIN_DATA_FILE}")
         print(f"Test dataset location: {config.TEST_DATA_FILE}")
-        return
+        return {}
     
     print(f"--Dataset has not been processed--")
     print(f"--Starting data processing--")
 
     if not config.RAW_TRAIN_DATA_FILE.is_file():
         print(f"--Training dataset not found at {config.RAW_TRAIN_DATA_FILE}!--")
-        return
+        return {}
     
     df_raw_data = pd.read_csv(config.RAW_TRAIN_DATA_FILE)
     df_raw_data.dropna(subset=['comment_text'], inplace=True)

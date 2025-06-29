@@ -16,11 +16,12 @@ TEST_DATA_FILE = PROCESSED_DATA_FILE / "test"
 PROCESSED_DATA_FILE.mkdir(parents=True, exist_ok=True)
 
 MAX_LENGTH = 256
+NUM_LABELS = 6
 
 #Model
 MODEL_DIR = ROOT_DIR / "model"
 SAVED_MODEL_PATH = MODEL_DIR / "toxic-comment-classifier"
-BEST_CHECKPOINT_PATH = SAVED_MODEL_PATH / "checkpoint-"
+BEST_CHECKPOINT_PATH = SAVED_MODEL_PATH / "checkpoint-11970"
 
 BASE_MODEL = "google-bert/bert-base-cased"
 
@@ -34,12 +35,12 @@ TRAINING_ARGS = {
     'fp16': True,
 
     "num_train_epochs": 3,
-    "learning_rate": 2e-5,
+    "learning_rate": 3e-5, #default 2e-5
     "weight_decay": 0.1,
     "warmup_ratio": 0.5,
 
     "per_device_train_batch_size": 8,
-    "gradient_accumulation_steps": 2,
+    "gradient_accumulation_steps": 4,
     "per_device_eval_batch_size": 8,
 
     "eval_strategy": "epoch",
@@ -50,6 +51,9 @@ TRAINING_ARGS = {
 
     "logging_dir": LOG_DIR,
     "logging_strategy": "steps",
-    "logging_steps": 100,
+    "logging_steps": 1000,
     "report_to": "tensorboard"
 }
+
+#App
+PROB_THRESHOLD = 0.5
