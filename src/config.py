@@ -55,5 +55,18 @@ TRAINING_ARGS = {
     "report_to": "tensorboard"
 }
 
+#Evaluation
+EVAL_DIR = ROOT_DIR / "report"
+EVAL_RESULT_DIR = EVAL_DIR / "eval_result"
+
+EVAL_ARGS = {
+    "output_dir": EVAL_RESULT_DIR,
+    "per_device_eval_batch_size": 8,
+    "do_train": False,
+    "do_eval": True
+}
+
+LABELS = ['toxic', 'severe toxic', 'obscene', 'threat', 'insult', 'identity_hate']
+
 #App
 PROB_THRESHOLD = 0.5
