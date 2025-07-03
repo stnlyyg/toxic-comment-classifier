@@ -1,0 +1,144 @@
+{
+  "best_global_step": 11970,
+  "best_metric": 0.7955635062611807,
+  "best_model_checkpoint": "c:\\Users\\stanl\\Documents\\Belajar AI Engineer\\Phase 1 - Core AI Foundation\\Project 2 - Toxic Comment Classification\\model\\toxic-comment-classifier\\checkpoint-11970",
+  "epoch": 3.0,
+  "eval_steps": 500,
+  "global_step": 11970,
+  "is_hyper_param_search": false,
+  "is_local_process_zero": true,
+  "is_world_process_zero": true,
+  "log_history": [
+    {
+      "epoch": 0.2506736855298615,
+      "grad_norm": 1.292241096496582,
+      "learning_rate": 5.007518796992482e-06,
+      "loss": 0.2553,
+      "step": 1000
+    },
+    {
+      "epoch": 0.501347371059723,
+      "grad_norm": 0.7013354301452637,
+      "learning_rate": 1.0020050125313284e-05,
+      "loss": 0.059,
+      "step": 2000
+    },
+    {
+      "epoch": 0.7520210565895845,
+      "grad_norm": 0.4950178861618042,
+      "learning_rate": 1.5032581453634084e-05,
+      "loss": 0.0482,
+      "step": 3000
+    },
+    {
+      "epoch": 1.0,
+      "eval_accuracy": 0.9261789127369575,
+      "eval_f1": 0.7545822423232563,
+      "eval_loss": 0.042469725012779236,
+      "eval_roc_auc": 0.9898302497351615,
+      "eval_runtime": 198.2265,
+      "eval_samples_per_second": 161.003,
+      "eval_steps_per_second": 20.128,
+      "step": 3990
+    },
+    {
+      "epoch": 1.0025067368552987,
+      "grad_norm": 0.6444094181060791,
+      "learning_rate": 2.0045112781954886e-05,
+      "loss": 0.0459,
+      "step": 4000
+    },
+    {
+      "epoch": 1.2531804223851601,
+      "grad_norm": 0.43060511350631714,
+      "learning_rate": 2.5057644110275693e-05,
+      "loss": 0.0416,
+      "step": 5000
+    },
+    {
+      "epoch": 1.5038541079150216,
+      "grad_norm": 0.18565639853477478,
+      "learning_rate": 2.992982456140351e-05,
+      "loss": 0.0401,
+      "step": 6000
+    },
+    {
+      "epoch": 1.754527793444883,
+      "grad_norm": 0.4087617099285126,
+      "learning_rate": 2.4922305764411027e-05,
+      "loss": 0.0383,
+      "step": 7000
+    },
+    {
+      "epoch": 2.0,
+      "eval_accuracy": 0.9284035719880934,
+      "eval_f1": 0.7870643827525103,
+      "eval_loss": 0.03773674741387367,
+      "eval_roc_auc": 0.9922916654444472,
+      "eval_runtime": 199.447,
+      "eval_samples_per_second": 160.017,
+      "eval_steps_per_second": 20.005,
+      "step": 7980
+    },
+    {
+      "epoch": 2.0050134737105973,
+      "grad_norm": 0.1497429758310318,
+      "learning_rate": 1.9909774436090226e-05,
+      "loss": 0.0382,
+      "step": 8000
+    },
+    {
+      "epoch": 2.2556871592404586,
+      "grad_norm": 0.8496078252792358,
+      "learning_rate": 1.4897243107769424e-05,
+      "loss": 0.0288,
+      "step": 9000
+    },
+    {
+      "epoch": 2.5063608447703203,
+      "grad_norm": 0.09506575018167496,
+      "learning_rate": 9.884711779448623e-06,
+      "loss": 0.0274,
+      "step": 10000
+    },
+    {
+      "epoch": 2.7570345303001815,
+      "grad_norm": 0.2386859953403473,
+      "learning_rate": 4.882205513784461e-06,
+      "loss": 0.0282,
+      "step": 11000
+    },
+    {
+      "epoch": 3.0,
+      "eval_accuracy": 0.9285289049036504,
+      "eval_f1": 0.7955635062611807,
+      "eval_loss": 0.03934187442064285,
+      "eval_roc_auc": 0.991791863341847,
+      "eval_runtime": 199.0105,
+      "eval_samples_per_second": 160.368,
+      "eval_steps_per_second": 20.049,
+      "step": 11970
+    }
+  ],
+  "logging_steps": 1000,
+  "max_steps": 11970,
+  "num_input_tokens_seen": 0,
+  "num_train_epochs": 3,
+  "save_steps": 500,
+  "stateful_callbacks": {
+    "TrainerControl": {
+      "args": {
+        "should_epoch_stop": false,
+        "should_evaluate": false,
+        "should_log": false,
+        "should_save": true,
+        "should_training_stop": true
+      },
+      "attributes": {}
+    }
+  },
+  "total_flos": 5.038336674725069e+16,
+  "train_batch_size": 8,
+  "trial_name": null,
+  "trial_params": null
+}
