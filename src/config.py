@@ -15,8 +15,8 @@ TEST_DATA_FILE = PROCESSED_DATA_FILE / "test"
 
 PROCESSED_DATA_FILE.mkdir(parents=True, exist_ok=True)
 
-MAX_LENGTH = 256
 NUM_LABELS = 6
+MAX_LENGTH=256
 
 #Model
 MODEL_DIR = ROOT_DIR / "model"
@@ -24,6 +24,7 @@ SAVED_MODEL_PATH = MODEL_DIR / "toxic-comment-classifier"
 BEST_CHECKPOINT_PATH = SAVED_MODEL_PATH / "checkpoint-11970"
 
 BASE_MODEL = "google-bert/bert-base-cased"
+PROBLEM_TYPE = "multi_label_classification"
 
 #Log
 LOG_DIR = ROOT_DIR / "logs"
@@ -70,3 +71,15 @@ LABELS = ['toxic', 'severe toxic', 'obscene', 'threat', 'insult', 'identity_hate
 
 #App
 PROB_THRESHOLD = 0.5
+
+#Data processing for competition evaluation
+COMP_EVAL_TEST = DATA_DIR / "test.csv"
+COMP_EVAL_TEST_LABELS = DATA_DIR / "test_labels.csv"
+COMP_EVAL_RESULT_DIR = EVAL_DIR / "comop_eval_result"
+
+COMP_EVAL_ARGS = {
+    "output_dir": COMP_EVAL_RESULT_DIR,
+    "per_device_eval_batch_size": 8,
+    "do_train": False,
+    "do_eval": True
+}

@@ -9,7 +9,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
 
 from src import config
 
-finetuned_model = BertForSequenceClassification.from_pretrained(config.BEST_CHECKPOINT_PATH, num_labels=config.NUM_LABELS, problem_type="multi_label_classification")
+finetuned_model = BertForSequenceClassification.from_pretrained(config.BEST_CHECKPOINT_PATH, num_labels=config.NUM_LABELS, problem_type=config.PROBLEM_TYPE)
 finetuned_tokenizer = AutoTokenizer.from_pretrained(config.BEST_CHECKPOINT_PATH)
 
 def classify_comments(text: str, threshold=config.PROB_THRESHOLD):
