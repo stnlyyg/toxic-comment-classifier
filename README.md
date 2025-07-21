@@ -98,10 +98,10 @@ uvicorn api:app --reload
 python gradio_app.py
 ```
 <img width="1545" height="194" alt="image" src="https://github.com/user-attachments/assets/5f910189-d07a-48a1-a757-ae92879d39c2" />
-<br/>
+<br/><br/>
 You can open localhost:8000/docs on your browser to use the app through FastAPI UI
 <img width="1918" height="1018" alt="image" src="https://github.com/user-attachments/assets/1fd66dd2-1a90-4bc9-8e55-91dc08550103" />
-<br/>
+<br/><br/>
 You can open localhost:7860 on your browser to use the gradio app frontend via connection to the backend
 <img width="1918" height="1017" alt="image" src="https://github.com/user-attachments/assets/ba71ce2f-9081-4ee2-8d8e-3b516fa6f76c" />
 
