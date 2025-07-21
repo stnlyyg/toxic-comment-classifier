@@ -1,0 +1,6 @@
+fastapi 
+transformers 
+pydantic 
+torch
+numpy 
+uvicorn[standard]

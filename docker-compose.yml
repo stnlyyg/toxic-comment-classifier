@@ -1,0 +1,20 @@
+version: '3.9'
+
+services:
+  backend:
+    build: 
+      context: .
+      dockerfile: Dockerfile-backend
+    container_name: toxiccomment-backend
+    ports:
+      - "8000:90"
+
+  frontend:
+    build: 
+      context: .
+      dockerfile: Dockerfile-frontend
+    container_name: toxiccomment-frontend
+    ports:
+      - "7860:7860"
+    depends_on:
+      - backend

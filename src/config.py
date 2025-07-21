@@ -7,7 +7,6 @@ DATA_DIR = ROOT_DIR / "data"
 
 #Data Processing
 RAW_TRAIN_DATA_FILE = DATA_DIR / "train.csv"
-RAW_TEST_DATA_FILE = DATA_DIR / "test.csv"
 
 PROCESSED_DATA_FILE = DATA_DIR / "processed"
 TRAIN_DATA_FILE = PROCESSED_DATA_FILE / "train"
@@ -58,10 +57,12 @@ TRAINING_ARGS = {
 
 #Evaluation
 EVAL_DIR = ROOT_DIR / "report"
-EVAL_RESULT_DIR = EVAL_DIR / "eval_result"
+COMP_EVAL_TEST = DATA_DIR / "test.csv"
+COMP_EVAL_TEST_LABELS = DATA_DIR / "test_labels.csv"
+COMP_EVAL_RESULT_DIR = EVAL_DIR / "comp_eval_result"
 
-EVAL_ARGS = {
-    "output_dir": EVAL_RESULT_DIR,
+COMP_EVAL_ARGS = {
+    "output_dir": COMP_EVAL_RESULT_DIR,
     "per_device_eval_batch_size": 8,
     "do_train": False,
     "do_eval": True
@@ -72,14 +73,11 @@ LABELS = ['toxic', 'severe toxic', 'obscene', 'threat', 'insult', 'identity_hate
 #App
 PROB_THRESHOLD = 0.5
 
-#Data processing for competition evaluation
-COMP_EVAL_TEST = DATA_DIR / "test.csv"
-COMP_EVAL_TEST_LABELS = DATA_DIR / "test_labels.csv"
-COMP_EVAL_RESULT_DIR = EVAL_DIR / "comop_eval_result"
-
-COMP_EVAL_ARGS = {
-    "output_dir": COMP_EVAL_RESULT_DIR,
-    "per_device_eval_batch_size": 8,
-    "do_train": False,
-    "do_eval": True
+id2label = {
+    0: 'toxic',
+    1: 'severe toxic',
+    2: 'obscene',
+    3: 'threat',
+    4: 'insult',
+    5: 'identity hate',
 }

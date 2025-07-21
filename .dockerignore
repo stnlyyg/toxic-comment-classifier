@@ -1,0 +1,24 @@
+# Git
+.gitattributes
+.gitignore
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Logs
+logs/
+*.log
+
+# Others
+data/
+hf_upload/
+notebooks/
+report/
+src/data_processing/
+src/evaluation/
+src/train/
+requirements.txt
