@@ -1,5 +1,5 @@
 # Introduction
-This project is a Toxic Comment Classification Challenge from Kaggle [(challenge link)](https://www.kaggle.com/competitions/jigsaw-toxic-comment-classification-challenge/data) that I finished to further challenge myself in fine-tuning model for solving multi-label classification case. It is a multi label classification system that detect six types of toxicity in text comment using fine-tuned BERT model. This project features a fully functional backend system with FastAPI, simple frontend with Gradio, and containerized deployment with Docker Compose.
+This project is a Toxic Comment Classification Challenge from Kaggle [(challenge link)](https://www.kaggle.com/competitions/jigsaw-toxic-comment-classification-challenge/data) that I finished to further challenge myself in fine-tuning model for solving multi-label classification case. This is a multi-label classification system that detect six types of toxicity in text comment using fine-tuned BERT model. This project features a fully functional backend system with FastAPI, simple frontend with Gradio, and containerized deployment with Docker Compose.
 
 ---
 
