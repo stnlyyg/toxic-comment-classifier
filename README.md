@@ -92,8 +92,27 @@ To run the app locally, you must first run the backend in your terminal, then fo
 uvicorn api:app --reload
 ```
 <img width="1508" height="301" alt="image" src="https://github.com/user-attachments/assets/803298bd-d338-4d82-bd31-d8dd994a7cde" />
+
 ```
-# cd to toxic-comment-classifier/src/backend-api/ and run this in your second terminal
+# cd to toxic-comment-classifier/src/frontend-gradio/ and run this in your second terminal
 python gradio_app.py
 ```
+<img width="1545" height="194" alt="image" src="https://github.com/user-attachments/assets/5f910189-d07a-48a1-a757-ae92879d39c2" />
+<br/>
+You can open localhost:8000/docs on your browser to use the app through FastAPI UI
+<img width="1918" height="1018" alt="image" src="https://github.com/user-attachments/assets/1fd66dd2-1a90-4bc9-8e55-91dc08550103" />
+<br/>
+You can open localhost:7860 on your browser to use the gradio app frontend via connection to the backend
+<img width="1918" height="1017" alt="image" src="https://github.com/user-attachments/assets/ba71ce2f-9081-4ee2-8d8e-3b516fa6f76c" />
 
+---
+
+## Run with Docker Compose
+To run the app via Docker, make sure your docker system is up and running before proceeding to next step.
+```
+# In root directory, run this in your terminal
+docker-compose up --build
+
+You can open localhost:8000/docs on your browser to use the app through FastAPI UI  
+You can open localhost:7860 on your browser to use the gradio app via connection to the backend
+```
