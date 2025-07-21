@@ -3,7 +3,7 @@ This project is a multi label classification system that detect six types of tox
 
 ---
 
-# Features
+## Features
 - Multi-label classification with six types of toxicity level:
   - toxic
   - severe toxic
@@ -19,7 +19,7 @@ This project is a multi label classification system that detect six types of tox
 
 ---
 
-# Tech Stack
+## Tech Stack
 | Component   | Technology                |
 | NLP Model   | BERT (bert-base-cased     |
 | Framework   | Pytorch, Transformer      |
@@ -32,5 +32,8 @@ This project is a multi label classification system that detect six types of tox
 # Setup and Installation
 ```
 # Git clone this repo
+https://github.com/stnlyyg/toxic-comment-classifier.git
 
+# Run this in your terminal (cd in root dir)
+pip install -r requirements.txt
 ```
