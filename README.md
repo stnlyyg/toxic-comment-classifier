@@ -49,10 +49,6 @@ This dataset consist of comment id, comment_text, and 6 level of toxicity separa
 <img width="1919" height="910" alt="image" src="https://github.com/user-attachments/assets/92f04d70-da30-44ca-9994-2879d5fd5aa3" />
 The dataset is featured to only consist of comment_text and a single label column which was the 6 level of toxicity that was merged into one column values. This dataset is then converted to Trainer API friendly format and split into 80:20 ratio for training and model optimization purpose.
 <img width="1919" height="912" alt="image" src="https://github.com/user-attachments/assets/eac68aa2-6279-4aac-92fd-d8ae3ff7feb6" />
-```
-# cd to toxic-comment-classifier/src/ and run this in your terminal
-python evaluation.py
-```
 
 ## Training
 Fine-tuning the BERT model leveraging Hugging Face Trainer API.
