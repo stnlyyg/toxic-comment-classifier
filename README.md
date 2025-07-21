@@ -22,7 +22,7 @@ This project is a Toxic Comment Classification Challenge from Kaggle [(challenge
 # Tech Stack
 | Component   | Technology                |
 |-------------|---------------------------|
-| NLP Model   | BERT (bert-base-cased     |
+| NLP Model   | BERT (bert-base-cased)    |
 | Framework   | Pytorch, Transformer      |
 | Backend     | FastAPI                   |
 | Frontend    | Gradio                    |
