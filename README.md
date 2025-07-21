@@ -56,7 +56,7 @@ Fine-tuning the BERT model leveraging Hugging Face Trainer API.
 # cd to toxic-comment-classifier/src/ and run this in your terminal
 python train.py
 
-Training result for 3 epochs
+Training result for 3 epochs. Best model metric is determined by f1-score.
 {'eval_loss': 0.042469725012779236, 'eval_f1': 0.7545822423232563, 'eval_roc_auc': 0.9898302497351615, 'eval_accuracy': 0.9261789127369575, 'eval_runtime': 198.2265, 'eval_samples_per_second': 161.003, 'eval_steps_per_second': 20.128, 'epoch': 1.0}
 
 {'eval_loss': 0.03773674741387367, 'eval_f1': 0.7870643827525103, 'eval_roc_auc': 0.9922916654444472, 'eval_accuracy': 0.9284035719880934, 'eval_runtime': 199.447, 'eval_samples_per_second': 160.017, 'eval_steps_per_second': 20.005, 'epoch': 2.0}
