@@ -69,4 +69,31 @@ Training result for 3 epochs
 ```
 
 ## Evaluation
-Evaluation uses 
+Evaluation uses test labels which was a separated data and was provided by the challenge organizer specifically for evaluation.
+<img width="1919" height="914" alt="image" src="https://github.com/user-attachments/assets/fe49331c-e116-4b24-b2eb-cec66c9b7358" />
+
+Classification report and confusion matrix are used as this project evaluation metrics.
+```
+# cd to toxic-comment-classifier/src/ and run this in your terminal
+python evaluation.py
+```
+<img width="1508" height="295" alt="image" src="https://github.com/user-attachments/assets/49f52c23-1b1f-4807-8383-710dc6d6e31b" />
+<img width="1480" height="787" alt="image" src="https://github.com/user-attachments/assets/1f4b3dea-d70b-43fe-b6f8-abc07d7baf04" />
+
+---
+
+# Running the App
+The app is separated into backend that contain the API and frontend with gradio for quick demo. There are two ways to run this, via local or docker compose.
+
+## Run Locally
+To run the app locally, you must first run the backend in your terminal, then follow by running frontend in separated terminal.
+```
+# cd to toxic-comment-classifier/src/backend-api/ and run this in your first terminal
+uvicorn api:app --reload
+```
+<img width="1508" height="301" alt="image" src="https://github.com/user-attachments/assets/803298bd-d338-4d82-bd31-d8dd994a7cde" />
+```
+# cd to toxic-comment-classifier/src/backend-api/ and run this in your second terminal
+python gradio_app.py
+```
+
