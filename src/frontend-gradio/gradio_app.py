@@ -7,7 +7,7 @@ USE_DOCKER = os.getenv("USE_DOCKER", "false") == "true"
 if USE_DOCKER:
     CLASSIFY_COMMENT_API = "http://backend:90/comment_classifier/"
 else:
-    CLASSIFY_COMMENT_API = "http://127.0.0.1:90/comment_classifier/"
+    CLASSIFY_COMMENT_API = "http://127.0.0.1:8000/comment_classifier/"
 
 def classify_comments(comment: str):
     if not comment or not comment.strip():
